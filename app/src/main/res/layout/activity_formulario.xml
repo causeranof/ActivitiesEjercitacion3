@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorVioleta"
+    tools:context=".FormularioActivity">
+
+    <TextView
+        android:id="@+id/txtFormularioCompletar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="Completar el formulario"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtFormularioName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtFormularioCompletar"
+        android:layout_marginBottom="15dp"
+        android:text="Nombre:"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edtFormularioName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textCapWords"
+        android:layout_alignBaseline="@+id/txtFormularioName"
+        android:layout_below="@+id/txtFormularioCompletar"
+        android:layout_toRightOf="@id/txtFormularioName"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/txtFormularioLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtFormularioName"
+        android:layout_marginBottom="15dp"
+        android:text="Apellido:"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edtFormularioLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textCapWords"
+        android:layout_alignBaseline="@id/txtFormularioLastName"
+        android:layout_below="@id/edtFormularioName"
+        android:layout_toRightOf="@id/txtFormularioLastName"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/txtFormularioAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtFormularioLastName"
+        android:layout_marginBottom="15dp"
+        android:text="Edad:"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edtFormularioAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/txtFormularioAge"
+        android:layout_below="@id/edtFormularioLastName"
+        android:layout_toRightOf="@id/txtFormularioAge"
+        android:inputType="number"
+        android:singleLine="true"
+        android:digits="1234567890"/>
+
+    <TextView
+        android:id="@+id/txtFormularioCareer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtFormularioAge"
+        android:layout_marginBottom="15dp"
+        android:text="Carrera:"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edtFormularioCareer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textCapSentences"
+        android:layout_alignBaseline="@id/txtFormularioCareer"
+        android:layout_below="@id/edtFormularioAge"
+        android:layout_toRightOf="@id/txtFormularioCareer"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/txtFormularioMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtFormularioCareer"
+        android:layout_marginBottom="15dp"
+        android:text="Email:"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edtFormularioMail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/txtFormularioMail"
+        android:layout_below="@id/edtFormularioCareer"
+        android:layout_toRightOf="@id/txtFormularioMail"
+        android:inputType="textWebEmailAddress"
+        android:singleLine="true"
+        android:imeOptions="actionDone"/>
+
+    <TextView
+        android:id="@+id/txtFormularioDeseo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtFormularioMail"
+        android:text="Deseo recibir mail informandome sobre los siguientes eventos"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/lnlFormularioCheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtFormularioDeseo"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/chkFormularioTorneo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Torneos" />
+
+        <CheckBox
+            android:id="@+id/chkFormularioMeetup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Meetups" />
+
+        <CheckBox
+            android:id="@+id/chkFormularioAsado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Asados" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnFormularioSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lnlFormularioCheckBox"
+        android:layout_centerHorizontal="true"
+        android:text="Enviar" />
+</RelativeLayout>

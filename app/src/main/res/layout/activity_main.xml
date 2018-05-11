@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorAccent">
+
+    <TextView
+        android:id="@+id/txtMainActivityWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorRosa"
+        android:text="¡Bienvenido al Formulario DigitalHouse!"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textSize="35dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_margin="20dp"
+        />
+    <Button
+        android:id="@+id/btnMainActivityStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comenzar"
+        android:layout_below="@id/txtMainActivityWelcome"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

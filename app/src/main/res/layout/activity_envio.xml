@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EnvioActivity">
+
+    <TextView
+        android:id="@+id/txtEnvio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="¡Envio Realizado Correctamente!"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txtEnvioInformacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtEnvio"
+        android:text="Informacion enviada:"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:id="@+id/lnlEnvioNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtEnvioInformacion"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtEnvioName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[nombre recibido]"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txtEnvioLastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[apellido recibido]"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnlEnvioAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lnlEnvioNombre"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtEnvioAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[edad recibida]"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" años."
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnlEnvioMail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lnlEnvioAge"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtEnvioMail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[email recibido]"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txtEnvioCarrera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[carrera recibida]"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtEnvioRecibirInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lnlEnvioMail"
+        android:text="Desea recibir informacion sobre:"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"/>
+    <LinearLayout
+        android:id="@+id/lnlEnvioOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtEnvioRecibirInfo"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtEnvioOptions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[opciones elegidas]"
+            android:textSize="20sp" />
+    </LinearLayout>
+</RelativeLayout>
